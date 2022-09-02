@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    {%block contenido_que_cambia %}
+    <form action ="{% url 'cursoFormulario' %}" method="POST"> {% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+    <input type="submit", value="enviar">
+    </form>
+    {% endblock %}
+</body>
+</html>
